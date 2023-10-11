@@ -63,7 +63,8 @@ const AdminHome = () => {
           {/* <!-- Tab Content --> */}
           <div>
             <div id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
-              <img className="shadow-xl  rounded-xl shadow-gray-900/[.2]" src="https://source.unsplash.com/ln_slYqaMiI" alt="Image Description"/>
+              <img className="shadow-xl  rounded-xl shadow-gray-900/[.2]" src="https://source.unsplash.com/ln_slYqaMiI" alt="library"/>
+              <p className="text-xs text-gray-500">photo credit to francescagrima from unsplash</p>
             </div>
           </div>
           {/* <!-- End Tab Content --> */}
