@@ -56,7 +56,7 @@ const LibraryBook = ({book}: Props) => {
 
       <div className="flex  border shadow-sm rounded-xl bg-gray-800 border-gray-700 shadow-slate-700/[.7] ">
         <div className='w-1/4 mr-2'>
-          <img className="  object-scale-down h-52 mt-6 ml-4" src={`http://localhost:4000/${book.cover}`}  alt="Image Description"/>
+          <img className="  object-scale-down h-52 mt-6 ml-4" src={`https://mern-library-app-backend.onrender.com/${book.cover}`}  alt="Image Description"/>
         </div>
 
         <div className="p-4 md:p-5 w-3/4">
