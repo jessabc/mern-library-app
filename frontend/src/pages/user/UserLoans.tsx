@@ -18,7 +18,7 @@ const UserLoans = () => {
       };
 
       try{
-        const response = await axios.get('https://mern-library-app-backend.onrender.com/members/loans', headers)
+        const response = await axios.get('https://mern-library-app-backend.onrender.com/api/members/loans', headers)
         dispatch({type:'SET_LOANS', payload: response.data})
       }catch(error) {
         if (axios.isAxiosError(error)) {

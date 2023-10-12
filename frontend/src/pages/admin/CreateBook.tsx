@@ -57,7 +57,7 @@ const CreateBook = () => {
     };
 
     try {
-       await axios.post('https://mern-library-app-backend.onrender.com/admin', formData, headers)
+       await axios.post('https://mern-library-app-backend.onrender.com/api/admin', formData, headers)
        setSuccessfullyCreatedBookAlertOpen(true)
        setForm({
         cover: '',

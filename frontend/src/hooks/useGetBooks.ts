@@ -6,7 +6,7 @@ const useGetBooks = () => {
 
     const getBooks = async () => {
         try {
-            const response = await axios.get('https://mern-library-app-backend.onrender.com/books')
+            const response = await axios.get('https://mern-library-app-backend.onrender.com/api/books')
             dispatch({type: 'SET_BOOKS', payload: response.data})
             console.log(response.data)
         }catch(error) {
