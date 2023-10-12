@@ -41,7 +41,7 @@ const LibraryBook = ({book}: Props) => {
 
     try{
       // check if already on loan
-      const response = await axios.post('http://localhost:4000/api/members', {bookID: book._id }, headers )
+      const response = await axios.post('https://mern-library-app-backend.onrender.com/members', {bookID: book._id }, headers )
       dispatch({type:'ADD_LOAN', payload: response.data})
       setSuccessfullyBorrowedAlertOpen(true)
     }catch(error) {

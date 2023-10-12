@@ -22,7 +22,7 @@ const Members = () => {
           };
 
         try {
-            const response = await axios.get('http://localhost:4000/api/admin/members', headers)
+            const response = await axios.get('https://mern-library-app-backend.onrender.com/admin/members', headers)
             setMembers(response.data)
         }catch(error) {
           if (axios.isAxiosError(error)) {

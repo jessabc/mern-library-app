@@ -22,7 +22,7 @@ const UserSignup = () => {
         setLoading(true)
 
         try{
-            const response = await axios.post('http://localhost:4000/api/users/signup', {email, password}) 
+            const response = await axios.post('https://mern-library-app-backend.onrender.com/users/signup', {email, password}) 
             dispatch({type:'LOGIN', payload: response.data})
             localStorage.setItem('user', JSON.stringify(response.data))
             navigate('/mybooks')

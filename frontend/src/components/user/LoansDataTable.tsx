@@ -73,7 +73,7 @@ export default function LoansDataTable({loans}: Props) {
       };
 
       try{
-        await axios.delete(`http://localhost:4000/api/members/loans/${id}`, headers)
+        await axios.delete(`https://mern-library-app-backend.onrender.com/members/loans/${id}`, headers)
         setSuccessfullyReturnedAlertOpen(true)
         setTimeout(() => {
           const updatedLoans = loans.filter((loan: IUserLoan) => loan._id != id)
@@ -94,7 +94,7 @@ export default function LoansDataTable({loans}: Props) {
     };
   
     try{
-      const response = await axios.patch(`http://localhost:4000/api/members/loans/${id}`, {}, headers)
+      const response = await axios.patch(`https://mern-library-app-backend.onrender.com/members/loans/${id}`, {}, headers)
       const updatedLoans = loans.map((loan: IUserLoan) => loan._id === id? {...response.data} :  loan)
       dispatch({type:'SET_LOANS', payload: updatedLoans})
       setSuccessfullyRenewedAlertOpen(true)
