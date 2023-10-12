@@ -9,7 +9,7 @@ const UserSignup = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [loading, setLoading] = useState(false)
+    const [_loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
 
     const navigate = useNavigate()
@@ -22,7 +22,7 @@ const UserSignup = () => {
         setLoading(true)
 
         try{
-            const response = await axios.post('https://mern-library-app-backend.onrender.com/users/signup', {email, password}) 
+            const response = await axios.post('https://mern-library-app-backend.onrender.comusers/signup', {email, password}) 
             dispatch({type:'LOGIN', payload: response.data})
             localStorage.setItem('user', JSON.stringify(response.data))
             navigate('/mybooks')

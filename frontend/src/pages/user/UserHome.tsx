@@ -9,17 +9,13 @@ const UserHome = () => {
   const getBooks = useGetBooks()
 
   const {books} = useBooksContext()
-  const {query, dispatch} = useQueryContext() 
+  const {query} = useQueryContext() 
 
   const filtered = books.filter(book =>book.title.toLowerCase().includes(query.toLowerCase()) ||  book.author.toLowerCase().includes(query.toLowerCase()))
 
   useEffect(() => {
     getBooks()
   }, [])
-
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault()
-  // }
 
   const bookElements = filtered.map(book => <LibraryBook book={book}/>)
 

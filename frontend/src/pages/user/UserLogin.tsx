@@ -8,7 +8,7 @@ import { Link, useNavigate } from 'react-router-dom'
 const UserLogin = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [_loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
   const {dispatch} = useUserContext()
@@ -25,7 +25,7 @@ const UserLogin = () => {
           localStorage.setItem('user', JSON.stringify(response.data))
           if(response.data.role === 'admin') {
             navigate('/admin')
-          }
+          } 
       }catch(error) {
           if (axios.isAxiosError(error)) {
             setError(error?.response?.data.error)
