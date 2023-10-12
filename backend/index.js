@@ -11,7 +11,7 @@ const app = express()
 
 // middleware 
 const corsOptions = {
-    origin: "http://localhost:5173" 
+    origin: "https://mern-library-app.onrender.com" 
 }
 
 app.use(express.json())
